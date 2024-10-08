@@ -1,0 +1,19 @@
+{
+  "name": "custom-command-cli",
+  "version": "1.0.0",
+  "description": "CLI tool for managing custom commands and command sequences",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "chmod +x index.js && mkdir -p ./bin && ln -sf ../index.js ./bin/$"
+  },
+  "bin": {
+    "$": "./bin/$"
+  },
+  "dependencies": {
+    "commander": "^9.5.0",
+    "inquirer": "^9.2.0",
+    "chalk": "^5.2.0"
+  }
+}
